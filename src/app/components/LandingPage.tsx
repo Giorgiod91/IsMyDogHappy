@@ -14,10 +14,9 @@ function LandingPage({}: Props) {
         Find out if your friend is getting enough exercise and attention to stay
         healthy and happy! 🐾{" "}
       </p>
-      <div className="grid-ro2 grid grid-cols-2 gap-6">
+      <div className="md:grid-row-2 grid space-y-4 md:grid-cols-2 md:gap-6 md:space-y-0">
         <DogRace />
         <TimeToMove />
-        <DogRace />
       </div>
     </div>
   );
