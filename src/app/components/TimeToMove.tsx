@@ -20,7 +20,7 @@ function TimeToMove({}: Props) {
     difference(DogRaces, time);
   };
   return (
-    <div className="flex h-[300px] w-[300px] flex-col items-center rounded-xl border-4 bg-[#FFDBB5] p-5 shadow-lg transition-transform hover:scale-105">
+    <div className="flex h-[300px] w-[300px] flex-col items-center rounded-xl border-4 border-[#D3A585] bg-[#FFF8E7] p-5 shadow-lg transition-transform hover:scale-105">
       <h1 className="mb-4 flex items-center space-x-2 text-xl font-semibold text-gray-700">
         ⏰ <span>How Much Time in Total?</span>
       </h1>
@@ -38,7 +38,7 @@ function TimeToMove({}: Props) {
         />
         <button
           type="submit"
-          className="mt-4 w-full rounded-lg bg-blue-500 py-2 text-white transition-all duration-300 hover:bg-blue-600"
+          className="mt-4 rounded-lg bg-[#FFB54C] py-2 text-white"
         >
           🚀 Set Time
         </button>

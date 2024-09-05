@@ -52,7 +52,7 @@ function DogRace({}: Props) {
         <h2 className="text-md font-semibold text-gray-600">Next 🐕</h2>
         <FcRight
           onClick={slidePictures}
-          className="cursor-pointer text-3xl transition-transform hover:scale-110"
+          className="primary cursor-pointer text-3xl transition-transform hover:scale-110"
         />
       </div>
     </div>

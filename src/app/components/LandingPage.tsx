@@ -6,7 +6,7 @@ type Props = {};
 
 function LandingPage({}: Props) {
   return (
-    <div className="mx-auto flex max-w-screen-lg flex-col items-center px-4 pt-20">
+    <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-10 px-4 pt-20">
       <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
         🐕 Dog Happiness Tracker
       </h1>
