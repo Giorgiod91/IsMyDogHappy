@@ -6,11 +6,11 @@ type Props = {};
 
 function LandingPage({}: Props) {
   return (
-    <div className="flex flex-col items-center pt-40">
+    <div className="mx-auto flex max-w-screen-lg flex-col items-center px-4 pt-20">
       <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
         🐕 Dog Happiness Tracker
       </h1>
-      <p className="p-2 pl-11 text-lg">
+      <p className="mt-4 text-center text-lg text-gray-600 md:text-xl">
         Find out if your friend is getting enough exercise and attention to stay
         healthy and happy! 🐾{" "}
       </p>
