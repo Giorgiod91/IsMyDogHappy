@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import difference from "../HelperFunctions/Calculate";
+import { DogRaces } from "../utils/DogRace";
 
 type Props = {};
 
@@ -13,7 +15,10 @@ function TimeToMove({}: Props) {
   //  setTime(value);
   // };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    difference(DogRaces, time);
+  };
   return (
     <div className="flex h-[300px] w-[300px] flex-col items-center rounded-xl border-4 bg-[#FFDBB5] p-5 shadow-lg transition-transform hover:scale-105">
       <h1 className="mb-4 flex items-center space-x-2 text-xl font-semibold text-gray-700">
