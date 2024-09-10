@@ -3,18 +3,18 @@ import { useState } from "react";
 import { DogRaces } from "../utils/DogRace";
 
 const difference = (
-  DogRaces: any[],
+  DogRaces: {
+    name: string;
+    need: number;
+    img: string;
+    activity_level: number;
+    exercise_needs: string;
+  }[],
   time: number,
   setHappy: (isHappy: boolean) => void,
 ) => {
-  DogRaces.forEach((dog) => {
-    if (time > dog.need) {
-      setHappy(true);
-      console.log("your dog is happy !");
-    } else {
-      console.log("your dog is happy !");
-    }
-  });
+  const isHappy = DogRaces.some((dog) => time > dog.need);
+  setHappy(isHappy);
 };
 
 export default difference;
