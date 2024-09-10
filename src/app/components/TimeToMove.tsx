@@ -7,7 +7,7 @@ type Props = {};
 
 function TimeToMove({}: Props) {
   const [time, setTime] = useState(0);
-
+  const [isHappy, setIsHappy] = useState(false);
   const safeTheInput = () => {};
 
   //const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +17,7 @@ function TimeToMove({}: Props) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    difference(DogRaces, time);
+    difference(DogRaces, time, setIsHappy);
   };
   return (
     <div className="flex h-[300px] w-[300px] flex-col items-center rounded-xl border-4 border-[#D3A585] bg-[#FFF8E7] p-5 shadow-lg transition-transform hover:scale-105">
@@ -42,6 +42,11 @@ function TimeToMove({}: Props) {
         >
           🚀 Set Time
         </button>
+        {isHappy ? (
+          <p className="text-green-500">Your dog is happy !</p>
+        ) : (
+          <p className="text-red-500">Your dog is not happy !</p>
+        )}
       </form>
     </div>
   );
