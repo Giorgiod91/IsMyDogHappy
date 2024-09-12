@@ -8,10 +8,12 @@ type Props = {};
 function StateContainer({}: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
-    <div className="flex flex-row">
-      <h1>container</h1>
-      <DogRace />
-      <TimeToMove />
+    <div className="flex">
+      <div className="flex flex-row justify-center space-x-10 p-5">
+        <DogRace />
+        <TimeToMove />
+        <TimeToMove />
+      </div>
     </div>
   );
 }

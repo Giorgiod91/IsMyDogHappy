@@ -1,20 +1,23 @@
-"use client";
-import { useState } from "react";
 import { DogRaces } from "../utils/DogRace";
 
+let susge = "";
+let susge2 = "";
+
 const difference = (
-  DogRaces: {
-    name: string;
-    need: number;
-    img: string;
-    activity_level: number;
-    exercise_needs: string;
-  }[],
+  DogRaces: any[],
   time: number,
-  setHappy: (isHappy: boolean) => void,
+  setSusge: React.Dispatch<React.SetStateAction<string>>,
+  setSusge2: React.Dispatch<React.SetStateAction<string>>,
 ) => {
-  const isHappy = DogRaces.some((dog) => time > dog.need);
-  setHappy(isHappy);
+  DogRaces.forEach((dog) => {
+    if (time < dog.need) {
+      setSusge("Dog needs more attention!");
+      setSusge2("");
+    } else {
+      setSusge2("Dog is happy!");
+      setSusge("");
+    }
+  });
 };
 
 export default difference;
