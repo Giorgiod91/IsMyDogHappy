@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import PrintsBackground from "./PrintsBackground";
 
 type Props = {};
+//:TODO: fix helper functions to calc right
+//:TODO: create a more modern appealing styling to state container and the cards
 
 function LandingPage({}: Props) {
   return (
