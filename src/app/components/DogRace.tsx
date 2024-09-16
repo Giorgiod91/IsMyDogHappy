@@ -16,10 +16,16 @@ import {
 
 function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slidePictures = () => {
+
+  const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      // check if we are at the last item if so we set the prevIndex to 0 and start from the beginning else we set the index + 1
       prevIndex === DogRaces.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? DogRaces.length - 1 : prevIndex - 1,
     );
   };
 
@@ -65,8 +71,9 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <button onClick={handlePrevious}> prev</button>
+
+      <CarouselNext onClick={handleNext} />
     </Carousel>
   );
 }
