@@ -7,7 +7,7 @@ import { DiVim } from "react-icons/di";
 
 type Props = {};
 
-function DogRace({}: Props) {
+function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slidePictures = () => {

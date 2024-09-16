@@ -20,7 +20,7 @@ function LandingPage({}: Props) {
         healthy and happy! 🐾{" "}
       </p>
       <div className="md:grid-row-2 grid space-y-4 md:grid-cols-2 md:gap-6 md:space-y-0">
-        <StateContainer />
+        <StateContainer susge={""} susge2={""} />
       </div>
     </div>
   );

@@ -5,12 +5,12 @@ import TimeToMove from "./TimeToMove";
 
 type Props = {};
 
-function StateContainer({}: Props) {
+function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <div className="flex">
       <div className="flex flex-row justify-center space-x-10 p-5">
-        <DogRace />
+        <DogRace susge={susge} susge2={susge2} />
         <TimeToMove />
         <TimeToMove />
       </div>
