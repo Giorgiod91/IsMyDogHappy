@@ -4,12 +4,14 @@ import DogRace from "./DogRace";
 import TimeToMove from "./TimeToMove";
 import StateContainer from "./StateContainer";
 import { motion } from "framer-motion";
+import PrintsBackground from "./PrintsBackground";
 
 type Props = {};
 
 function LandingPage({}: Props) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
+      {/* <PrintsBackground printCount={50} /> */}
       <header className="absolute left-0 top-0 flex w-full justify-between p-4">
         <h1 className="text-3xl font-bold">
           PupHappiness{" "}
