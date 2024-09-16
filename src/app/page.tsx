@@ -2,6 +2,7 @@ import Link from "next/link";
 import LandingPage from "./components/LandingPage";
 import { Dog } from "lucide-react";
 import DogRace from "./components/DogRace";
+import StateContainer from "./components/StateContainer";
 
 export default function HomePage() {
   return (
@@ -9,7 +10,9 @@ export default function HomePage() {
       <section className="h-screen">
         <LandingPage />
       </section>
-      <section></section>
+      <section>
+        <StateContainer susge="susge" susge2="susge2" />
+      </section>
     </main>
   );
 }
