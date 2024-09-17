@@ -45,7 +45,7 @@ function LandingPage({}: Props) {
             whileTap={{ scale: 0.95, rotate: -2 }}
           />
         </div>
-        <h2 className="mb-4 text-5xl font-extrabold">
+        <h2 className="mb-4 text-pretty text-5xl font-extrabold">
           Track Your Pup's Joy <span className="text-yellow-400">🐕</span>
         </h2>
         <p className="mb-8 text-xl">
