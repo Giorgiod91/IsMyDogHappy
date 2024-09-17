@@ -20,7 +20,10 @@ function PartTwo({}: Props) {
     2,
   );
   trackHashMap.set({ name: "playing", emoji: "/play.png" }, 3);
-
+  trackHashMap.set({ name: "eating", emoji: "/eat.png" }, 4);
+  trackHashMap.set({ name: "sleeping", emoji: "/sleep.png" }, 5);
+  trackHashMap.set({ name: "treats", emoji: "🦴" }, 6);
+  //sorting the hashmap by value
   const sortedTrackHashMap = Array.from(trackHashMap).sort(
     (a, b) => a[1] - b[1],
   );
@@ -29,7 +32,7 @@ function PartTwo({}: Props) {
     <div className="flex flex-col justify-center space-y-10">
       <h1 className="text-pretty text-center text-7xl font-extrabold text-white">
         {" "}
-        What to Track
+        What needs my dog to be happy?{" "}
       </h1>
       <div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
         {Array.from(sortedTrackHashMap).map(([key], index) => (
