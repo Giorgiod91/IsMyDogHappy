@@ -8,17 +8,21 @@ type Props = {};
 function PartTwo({}: Props) {
   const [clicked, setClicked] = useState(false);
   const trackHashMap = new Map();
-  trackHashMap.set({ name: "walking", emoji: "🐕" }, 1);
-  trackHashMap.set({ name: "playing", emoji: "/play.png" }, 2);
+  trackHashMap.set({ name: "walking", emoji: "🐕" }, 2);
+  trackHashMap.set({ name: "playing", emoji: "/play.png" }, 3);
+
+  const sortedTrackHashMap = Array.from(trackHashMap).sort(
+    (a, b) => a[1] - b[1],
+  );
 
   return (
     <div className="flex flex-col justify-center">
-      <h1 className="text-pretty text-7xl font-extrabold text-white">
+      <h1 className="text-pretty text-center text-7xl font-extrabold text-white">
         {" "}
         What to Track
       </h1>
       <div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
-        {Array.from(trackHashMap).map(([key, value], index) => (
+        {Array.from(sortedTrackHashMap).map(([key, value], index) => (
           <div id={index.toString()} className="flex flex-col">
             {key.emoji.includes(".png") ? (
               <div className="flex border-4">
