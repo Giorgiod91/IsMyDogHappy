@@ -12,7 +12,7 @@ export default function HomePage() {
       <section className="h-screen">
         <LandingPage />
       </section>
-      <section className="h-screen bg-[#F5F5F5]">
+      <section className="h-[500px] bg-[#F5F5F5]">
         <PartTwo />
       </section>
       <section>

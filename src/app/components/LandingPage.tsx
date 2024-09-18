@@ -20,13 +20,13 @@ function LandingPage({}: Props) {
           <span className="text-yellow-400 opacity-0 lg:opacity-100">🐾</span>
         </h1>
         <nav className="pt-2 lg:pt-0">
-          <a href="#features" className="px-4 hover:underline">
+          <a href="#features" className="px-4 hover:text-[#229799]">
             Features
           </a>
-          <a href="#about" className="px-4 hover:underline">
+          <a href="#about" className="px-4 hover:text-[#229799]">
             About
           </a>
-          <a href="#contact" className="px-4 hover:underline">
+          <a href="#contact" className="px-4 hover:text-[#229799]">
             Contact
           </a>
         </nav>
@@ -52,7 +52,7 @@ function LandingPage({}: Props) {
           Experience a new era of innovation and design for your Playful
           friend's happiness! <span className="text-yellow-400">✨</span>
         </p>
-        <button className="rounded-lg bg-blue-500 px-6 py-2 text-white transition duration-300 hover:bg-blue-700">
+        <button className="rounded-lg bg-[#48CFCB] px-6 py-2 text-white transition duration-300 hover:bg-[#229799]">
           Get Started <span className="text-yellow-400">🚀</span>
         </button>
       </main>
