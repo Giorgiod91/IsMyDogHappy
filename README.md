@@ -1,6 +1,7 @@
 # 🐕 Dog Happiness Tracker App
 
-![Dog Happiness Tracker App](https://github.com/user-attachments/assets/851bd2e5-b124-4e44-9e8b-36ba026aa1af)
+![image](https://github.com/user-attachments/assets/5eb90fe8-5817-4903-b355-3fe1a8f52473)
+
 
 Welcome to the **Dog Happiness Tracker App**! 🐶 This application is designed to help you monitor and enhance your dog's happiness by tracking and analyzing their activities. The app assesses whether your dog's activity level is adequate based on their breed and age, and provides actionable feedback to adjust their activities for optimal well-being.
 
