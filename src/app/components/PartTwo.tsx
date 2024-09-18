@@ -30,9 +30,8 @@ function PartTwo({}: Props) {
 
   return (
     <div className="mt-20 flex flex-col justify-center space-y-10">
-      <h1 className="text-gray text-pretty text-center text-7xl font-extrabold">
-        {" "}
-        What needs my dog to be happy?{" "}
+      <h1 className="text-pretty text-center text-7xl font-extrabold text-gray-900">
+        What does my dog need to be happy?
       </h1>
       <div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
         {Array.from(sortedTrackHashMap).map(([key], index) => (
@@ -40,14 +39,15 @@ function PartTwo({}: Props) {
             {key.emoji.includes(".png") ? (
               <motion.div
                 whileHover={{
-                  backgroundColor: "#229799",
+                  backgroundColor: "#10B981",
                   scale: 1.1,
+                  boxShadow: "0 8px 12px rgba(0, 0, 0, 0.2)",
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center bg-[#48CFCB] shadow-lg"
+                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg" // Light gray background
               >
                 <Image width={100} height={100} src={key.emoji} alt="" />
-                <p className="text-white">{key.name}</p>
+                <p className="text-gray-700">{key.name}</p>
               </motion.div>
             ) : (
               /* emoji part here */
@@ -56,25 +56,25 @@ function PartTwo({}: Props) {
                   setClickedIndex(clickedIndex === index ? null : index)
                 }
                 whileHover={{
-                  backgroundColor: "#229799",
+                  backgroundColor: "#10B981",
                   scale: 1.1,
+                  boxShadow: "0 8px 12px rgba(0, 0, 0, 0.2)",
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center bg-[#48CFCB] shadow-lg"
+                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
               >
-                {" "}
                 {clickedIndex == index ? (
                   <div
                     onClick={() =>
                       setClickedIndex(clickedIndex === index ? null : index)
                     }
                   >
-                    <p className="text-white">{key.description}</p>
+                    <p className="text-gray-700">{key.description}</p>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center">
-                    <span className="cursor-pointer">{key.emoji}</span>
-                    <h3 className="text-white">{key.name}</h3>
+                    <span className="cursor-pointer text-2xl">{key.emoji}</span>
+                    <h3 className="text-gray-700">{key.name}</h3>
                   </div>
                 )}
               </motion.div>
