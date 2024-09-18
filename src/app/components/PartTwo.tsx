@@ -30,7 +30,7 @@ function PartTwo({}: Props) {
 
   return (
     <div className="flex flex-col justify-center space-y-10">
-      <h1 className="text-pretty text-center text-7xl font-extrabold text-white">
+      <h1 className="text-gray text-pretty text-center text-7xl font-extrabold">
         {" "}
         What needs my dog to be happy?{" "}
       </h1>
@@ -40,7 +40,7 @@ function PartTwo({}: Props) {
             {key.emoji.includes(".png") ? (
               <motion.div
                 whileHover={{
-                  backgroundColor: "red",
+                  backgroundColor: "#48CFCB",
                   scale: 1.1,
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -56,7 +56,7 @@ function PartTwo({}: Props) {
                   setClickedIndex(clickedIndex === index ? null : index)
                 }
                 whileHover={{
-                  backgroundColor: "red",
+                  backgroundColor: "#48CFCB",
                   scale: 1.1,
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
