@@ -4,6 +4,7 @@ import { DogRaces } from "../utils/DogRace";
 import { FcRight } from "react-icons/fc";
 import { ImGift } from "react-icons/im";
 import { DiVim } from "react-icons/di";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { Card, CardContent } from "../../components/ui/card";
 import {
@@ -71,7 +72,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <button onClick={handlePrevious}> prev</button>
+      <CarouselPrevious onClick={handlePrevious} />
 
       <CarouselNext onClick={handleNext} />
     </Carousel>
