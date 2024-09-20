@@ -36,12 +36,12 @@ function TimeToMove({}: Props) {
           onChange={(e) => setTime(parseInt(e.target.value))}
           type="number"
           id="time"
-          className="rounded-lg border-2 border-blue-500 p-3 text-center text-lg"
+          className="rounded-lg border-2 border-[#10B981] p-3 text-center text-lg"
           placeholder="Enter time"
         />
         <button
           type="submit"
-          className="mt-4 w-full rounded-lg bg-[#48CFCB] py-2 text-white transition-all duration-300 hover:bg-[#229799]"
+          className="mt-4 w-full rounded-lg bg-[#10B981] py-2 text-white transition-all duration-300 hover:bg-[#229799]"
         >
           🚀 Set Time
         </button>

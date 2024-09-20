@@ -16,17 +16,17 @@ function LandingPage({}: Props) {
       {/* <PrintsBackground printCount={50} /> */}
       <header className="absolute left-0 top-0 flex w-full justify-between p-4">
         <h1 className="text-3xl font-bold">
-          PupHappiness{" "}
+          Pup <span className="text-[#10B981]">Happiness</span>
           <span className="text-yellow-400 opacity-0 lg:opacity-100">🐾</span>
         </h1>
         <nav className="pt-2 lg:pt-0">
-          <a href="#features" className="px-4 hover:text-[#229799]">
+          <a href="#features" className="px-4 hover:text-[#10B981]">
             Features
           </a>
-          <a href="#about" className="px-4 hover:text-[#229799]">
+          <a href="#about" className="px-4 hover:text-[#10B981]">
             About
           </a>
-          <a href="#contact" className="px-4 hover:text-[#229799]">
+          <a href="#contact" className="px-4 hover:text-[#10B981]">
             Contact
           </a>
         </nav>
@@ -52,7 +52,8 @@ function LandingPage({}: Props) {
           Experience a new era of innovation and design for your Playful
           friend's happiness! <span className="text-yellow-400">✨</span>
         </p>
-        <button className="rounded-lg bg-[#48CFCB] px-6 py-2 text-white transition duration-300 hover:bg-[#229799]">
+
+        <button className="rounded-lg bg-[#10B981] px-6 py-2 text-white transition duration-300 hover:bg-[#229799]">
           Get Started <span className="text-yellow-400">🚀</span>
         </button>
       </main>
