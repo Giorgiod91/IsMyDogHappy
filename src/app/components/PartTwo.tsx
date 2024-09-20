@@ -19,10 +19,42 @@ function PartTwo({}: Props) {
     },
     2,
   );
-  trackHashMap.set({ name: "playing", emoji: "/play.png" }, 3);
-  trackHashMap.set({ name: "eating", emoji: "/eat.png" }, 4);
-  trackHashMap.set({ name: "sleeping", emoji: "/sleep.png" }, 5);
-  trackHashMap.set({ name: "treats", emoji: "🦴" }, 6);
+  trackHashMap.set(
+    {
+      name: "playing",
+      emoji: "/play.png",
+      description:
+        "depending on the race u have to play at least 30 mins a day",
+    },
+    3,
+  );
+  trackHashMap.set(
+    {
+      name: "eating",
+      emoji: "/eat.png",
+      description:
+        "your dog needs at least wet food once a day and dry foot aswell",
+    },
+    4,
+  );
+  trackHashMap.set(
+    {
+      name: "sleeping",
+      emoji: "/sleep.png",
+      description:
+        "if u played enough and walked enough with your dog he will sleep up to 18 hours a day",
+    },
+    5,
+  );
+  trackHashMap.set(
+    {
+      name: "treats",
+      emoji: "🦴",
+      description:
+        "treats are important aswell u can use them as a reward aswell",
+    },
+    6,
+  );
   //sorting the hashmap by value
   const sortedTrackHashMap = Array.from(trackHashMap).sort(
     (a, b) => a[1] - b[1],
