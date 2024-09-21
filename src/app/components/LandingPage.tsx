@@ -20,13 +20,13 @@ function LandingPage({}: Props) {
           <span className="text-yellow-400 opacity-0 lg:opacity-100">🐾</span>
         </h1>
         <nav className="pt-2 lg:pt-0">
-          <a href="#features" className="px-4 hover:text-[#10B981]">
+          <a href="#features" className="px-4 font-medium hover:text-[#10B981]">
             Features
           </a>
-          <a href="#about" className="px-4 hover:text-[#10B981]">
+          <a href="#about" className="px-4 font-medium hover:text-[#10B981]">
             About
           </a>
-          <a href="#contact" className="px-4 hover:text-[#10B981]">
+          <a href="#contact" className="px-4 font-medium hover:text-[#10B981]">
             Contact
           </a>
         </nav>

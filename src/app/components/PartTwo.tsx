@@ -75,25 +75,39 @@ function PartTwo({}: Props) {
                   scale: 1.1,
                   boxShadow: "0 8px 12px rgba(0, 0, 0, 0.2)",
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                initial={{ opacity: 0, y: 200 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10,
+                  ease: "easeOut",
+                }}
                 className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg" // Light gray background
               >
                 <Image width={100} height={100} src={key.emoji} alt="" />
-                <p className="text-gray-700">{key.name}</p>
+                <p className="font-extrabold text-gray-700">{key.name}</p>
               </motion.div>
             ) : (
-              /* emoji part here */
+              /* emoji part*/
               <motion.div
                 onClick={() =>
                   setClickedIndex(clickedIndex === index ? null : index)
                 }
+                initial={{ opacity: 0, y: -200 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{
                   backgroundColor: "#10B981",
                   scale: 1.1,
                   boxShadow: "0 8px 12px rgba(0, 0, 0, 0.2)",
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10,
+                  ease: "easeOut",
+                }}
+                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] font-extrabold shadow-lg"
               >
                 {clickedIndex == index ? (
                   <div
@@ -101,7 +115,9 @@ function PartTwo({}: Props) {
                       setClickedIndex(clickedIndex === index ? null : index)
                     }
                   >
-                    <p className="text-gray-700">{key.description}</p>
+                    <p className="p-3 font-semibold text-gray-700">
+                      {key.description}
+                    </p>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center">
