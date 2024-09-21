@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import difference from "../HelperFunctions/Calculate";
 import { DogRaces } from "../utils/DogRace";
+import { motion as Motion } from "framer-motion";
 
 type Props = {};
 
@@ -23,7 +24,12 @@ function TimeToMove({}: Props) {
     }
   };
   return (
-    <div className="flex h-[350px] w-[350px] flex-col items-center rounded-3xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+    <Motion.div
+      initial={{ opacity: 0, x: 300 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="flex h-[350px] w-[350px] flex-col items-center rounded-3xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
+    >
       <h1 className="mb-4 text-2xl font-semibold text-gray-800">
         ⏰ How Much Time in Total?
       </h1>
@@ -49,7 +55,7 @@ function TimeToMove({}: Props) {
 
       {susge && <p className="mt-4 text-sm text-red-500">{susge}</p>}
       {susge2 && <p className="mt-4 text-sm text-green-500">{susge2}</p>}
-    </div>
+    </Motion.div>
   );
 }
 export default TimeToMove;
