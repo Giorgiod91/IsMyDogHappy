@@ -3,6 +3,24 @@ import React, { useState } from "react";
 import difference from "../HelperFunctions/Calculate";
 import { DogRaces } from "../utils/DogRace";
 import { motion as Motion } from "framer-motion";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select";
 
 type Props = {};
 
@@ -28,33 +46,73 @@ function TimeToMove({}: Props) {
       initial={{ opacity: 0, x: 300 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex h-[350px] w-[350px] flex-col items-center rounded-3xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
     >
-      <h1 className="mb-4 text-2xl font-semibold text-gray-800">
-        ⏰ How Much Time in Total?
-      </h1>
-      <form className="flex w-full flex-col space-y-6" onSubmit={handleSubmit}>
-        <label htmlFor="time" className="text-sm font-medium text-gray-500">
-          ⌛ Time (in minutes)
-        </label>
-        <input
-          value={time}
-          onChange={(e) => setTime(parseInt(e.target.value))}
-          type="number"
-          id="time"
-          className="rounded-lg border border-gray-200 p-3 text-center text-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#10B981]"
-          placeholder="Enter time"
-        />
-        <button
-          type="submit"
-          className="mt-4 w-full rounded-lg bg-[#10B981] py-3 text-lg text-white transition-all duration-300 hover:bg-[#229799] hover:shadow-md"
-        >
-          🚀 Set Time
-        </button>
-      </form>
-
-      {susge && <p className="mt-4 text-sm text-red-500">{susge}</p>}
-      {susge2 && <p className="mt-4 text-sm text-green-500">{susge2}</p>}
+      <Card className="w-[350px] bg-[#F3F4F6] shadow-lg">
+        {" "}
+        {/* Light gray background */}
+        <CardHeader>
+          <CardTitle className="text-pretty text-center text-2xl font-extrabold text-gray-900">
+            ⏰ How Much Time in Total?
+          </CardTitle>
+          <CardDescription className="text-gray-700">
+            How much time does my dog actually need to be happy?
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form onSubmit={handleSubmit}>
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <Label htmlFor="time" className="font-semibold text-gray-700">
+                  Time
+                </Label>
+                <Input
+                  id="time"
+                  placeholder="How much time"
+                  onChange={(e) => setTime(parseInt(e.target.value) || 0)}
+                  className="border-[#10B981]"
+                />
+              </div>
+              <div className="flex flex-col space-y-1.5">
+                <Label
+                  htmlFor="framework"
+                  className="font-semibold text-gray-700"
+                >
+                  Select Dog Breed
+                </Label>
+                <Select
+                  onValueChange={(value) =>
+                    setCurrentIndex(
+                      DogRaces.findIndex((dog) => dog.name === value),
+                    )
+                  }
+                >
+                  <SelectTrigger id="framework">
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent position="popper">
+                    {DogRaces.map((dog, index) => (
+                      <SelectItem key={index} value={dog.name}>
+                        {dog.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </form>
+        </CardContent>
+        <CardFooter className="flex justify-between">
+          <Button
+            variant="outline"
+            className="border-gray-300 text-gray-700 hover:bg-gray-100"
+          >
+            Cancel
+          </Button>
+          <Button type="submit" className="bg-pretty bg-[#10B981] text-white">
+            Show
+          </Button>
+        </CardFooter>
+      </Card>
     </Motion.div>
   );
 }
