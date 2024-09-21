@@ -1,7 +1,15 @@
 # 🐕 Dog Happiness Tracker App
 
 ![image](https://github.com/user-attachments/assets/a4230d68-b27e-4e56-82af-afd5965f9e14)
-![image](https://github.com/user-attachments/assets/da46a459-5562-486a-9191-d6a786737866)
+![image](https://github.com/user-attachments/assets/17eea25a-2123-44d2-a757-08225df16172)
+
+
+
+
+https://github.com/user-attachments/assets/355c8002-bc6c-48e8-b09c-d6a3407d04b1
+
+
+
 
 
 
