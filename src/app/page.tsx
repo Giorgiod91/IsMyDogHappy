@@ -19,7 +19,7 @@ export default function HomePage() {
       <section>
         <StateContainer susge="susge" susge2="susge2" />
       </section>
-      <section>
+      <section className="h-screen bg-[#F5F5F5]">
         <About />
       </section>
     </main>
