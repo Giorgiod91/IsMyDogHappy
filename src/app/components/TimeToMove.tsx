@@ -26,19 +26,21 @@ type Props = {};
 
 function TimeToMove({}: Props) {
   const [time, setTime] = useState(0);
-  const [susge, setSusge] = useState("");
-  const [susge2, setSusge2] = useState("");
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [result, setResult] = useState<string | null>(null);
   const safeTheInput = () => {};
   //const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   // e.preventDefault();
   //  setTime(value);
   // };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (DogRaces[currentIndex]) {
-      difference([DogRaces[currentIndex]], time, setSusge, setSusge2);
+  const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
+    e?.preventDefault();
+    const selectedDog = DogRaces[currentIndex];
+    if (selectedDog) {
+      const happinessResult = difference(selectedDog, time, "Happy", "Sad");
+      setResult(happinessResult);
     }
   };
   return (
@@ -48,8 +50,6 @@ function TimeToMove({}: Props) {
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <Card className="w-[350px] bg-[#F3F4F6] shadow-lg">
-        {" "}
-        {/* Light gray background */}
         <CardHeader>
           <CardTitle className="text-pretty text-center text-2xl font-extrabold text-gray-900">
             ⏰ How Much Time in Total?
@@ -108,10 +108,18 @@ function TimeToMove({}: Props) {
           >
             Cancel
           </Button>
-          <Button type="submit" className="bg-pretty bg-[#10B981] text-white">
+          <Button
+            onClick={() => handleSubmit()}
+            className="bg-pretty bg-[#10B981] text-white"
+          >
             Show
           </Button>
         </CardFooter>
+        {result && (
+          <div className="text-center text-xl font-bold text-[#10B981]">
+            {result}
+          </div>
+        )}
       </Card>
     </Motion.div>
   );

@@ -1,20 +1,10 @@
 import { DogRaces } from "../utils/DogRace";
 
-let susge = "";
-let susge2 = "";
-
-const difference = (
-  dog: any,
-  time: number,
-  setSusge: React.Dispatch<React.SetStateAction<string>>,
-  setSusge2: React.Dispatch<React.SetStateAction<string>>,
-) => {
+const difference = (dog: any, time: number, happy: string, sad: string) => {
   if (time < dog.need) {
-    setSusge("Dog needs more attention!");
-    setSusge2("");
+    return happy;
   } else {
-    setSusge2("Dog is happy!");
-    setSusge("");
+    return sad;
   }
 };
 

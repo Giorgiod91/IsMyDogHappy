@@ -16,10 +16,10 @@ export default function HomePage() {
       <section className="h-[500px] bg-[#F5F5F5]">
         <PartTwo />
       </section>
-      <section>
+      <section className="h-screen">
         <StateContainer susge="susge" susge2="susge2" />
       </section>
-      <section className="h-screen bg-[#F5F5F5]">
+      <section className="h-[200px] bg-[#F5F5F5]">
         <About />
       </section>
     </main>
