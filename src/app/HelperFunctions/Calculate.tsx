@@ -3,9 +3,17 @@ import { DogRaces } from "../utils/DogRace";
 
 const difference = (dog: any, time: number, happy: string, sad: string) => {
   if (time < dog.need) {
-    return <div></div>;
+    return (
+      <div>
+        <p>That Dog Is Happy!</p>
+      </div>
+    );
   } else {
-    return sad;
+    return (
+      <div>
+        <p>That Dog needs more !</p>
+      </div>
+    );
   }
 };
 
