@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import difference from "../HelperFunctions/Calculate";
+import difference from "../HelperFunctions/Calculate"; // Ensure this function returns a string
 import { DogRaces } from "../utils/DogRace";
 import { motion as Motion } from "framer-motion";
 import { Button } from "../../components/ui/button";
@@ -37,12 +37,8 @@ function TimeToMove({}: Props) {
 
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
-    const selectedDog = DogRaces[currentIndex];
-    if (selectedDog) {
-      const happinessResult = difference(selectedDog, time, "Happy", "Sad");
-      setResult(happinessResult);
-    }
   };
+
   return (
     <Motion.div
       initial={{ opacity: 0, x: 300 }}
