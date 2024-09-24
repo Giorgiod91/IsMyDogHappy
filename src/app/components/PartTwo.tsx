@@ -88,8 +88,22 @@ function PartTwo({}: Props) {
                 }}
                 className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
               >
-                <Image width={100} height={100} src={key.emoji} alt="" />
-                <p className="font-extrabold text-gray-700">{key.name}</p>
+                {clickedIndex == index ? (
+                  <div
+                    onClick={() =>
+                      setClickedIndex(clickedIndex === index ? null : index)
+                    }
+                  >
+                    <p className="p-3 font-semibold text-gray-700">
+                      {key.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center">
+                    <Image width={100} height={100} src={key.emoji} alt="" />
+                    <p className="font-extrabold text-gray-700">{key.name}</p>
+                  </div>
+                )}
               </motion.div>
             ) : (
               /* emoji part*/
