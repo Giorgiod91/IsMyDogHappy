@@ -2,13 +2,17 @@
 import React, { useState } from "react";
 import DogRace from "./DogRace";
 import TimeToMove from "./TimeToMove";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
-    <div className="relative mx-auto mt-12 flex max-w-4xl flex-col items-center justify-center rounded-lg bg-gray-900 p-6 shadow-2xl">
+    <motion.div
+      whileInView={{ backgroundColor: "" }}
+      className="relative mx-auto mt-12 flex max-w-4xl flex-col items-center justify-center rounded-lg bg-gray-900 p-6 shadow-2xl"
+    >
       <h2 className="mb-6 text-7xl font-extrabold text-white">
         Your Dog's Stats
       </h2>
@@ -20,7 +24,7 @@ function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
           <TimeToMove />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

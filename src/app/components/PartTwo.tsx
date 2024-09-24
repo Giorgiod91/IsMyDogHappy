@@ -70,6 +70,9 @@ function PartTwo({}: Props) {
           <div id={index.toString()} className="flex flex-col">
             {key.emoji.includes(".png") ? (
               <motion.div
+                onClick={() =>
+                  setClickedIndex(clickedIndex === index ? null : index)
+                }
                 whileHover={{
                   backgroundColor: "#10B981",
                   scale: 1.1,
@@ -83,7 +86,7 @@ function PartTwo({}: Props) {
                   damping: 10,
                   ease: "easeOut",
                 }}
-                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg" // Light gray background
+                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
               >
                 <Image width={100} height={100} src={key.emoji} alt="" />
                 <p className="font-extrabold text-gray-700">{key.name}</p>
