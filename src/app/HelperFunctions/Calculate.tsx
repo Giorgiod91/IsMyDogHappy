@@ -1,19 +1,14 @@
 import { div, p } from "framer-motion/client";
 import { DogRaces } from "../utils/DogRace";
-
-const difference = (dog: any, time: number) => {
-  if (time < dog.need) {
-    return (
-      <div>
-        <p>That Dog Is Happy!</p>
-      </div>
-    );
+//fixing error with making sure to allways return a string
+const difference = (
+  time: number,
+  dog: { name: string; need: number },
+): string => {
+  if (time > dog.need) {
+    return "That Dog Is Happy!";
   } else {
-    return (
-      <div>
-        <p>That Dog needs more !</p>
-      </div>
-    );
+    return "That Dog needs more time!";
   }
 };
 
