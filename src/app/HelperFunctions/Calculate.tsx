@@ -1,7 +1,7 @@
 import { div, p } from "framer-motion/client";
 import { DogRaces } from "../utils/DogRace";
 
-const difference = (dog: any, time: number, happy: string, sad: string) => {
+const difference = (dog: any, time: number) => {
   if (time < dog.need) {
     return (
       <div>

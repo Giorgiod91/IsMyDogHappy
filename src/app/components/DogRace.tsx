@@ -72,8 +72,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                       🏃‍♂️ Exercise Needs
                     </p>
                     <p className="text-sm text-gray-700">
-                      {DogRaces[currentIndex]?.exercise_needs ||
-                        "ℹ️ Information not available"}
+                      {DogRaces[currentIndex]?.exercise_needs || ""}
                     </p>
                   </div>
                 </Card>
