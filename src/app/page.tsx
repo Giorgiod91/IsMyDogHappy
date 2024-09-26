@@ -19,7 +19,7 @@ export default function HomePage() {
       <section className="flex h-screen justify-center">
         <StateContainer susge="susge" susge2="susge2" />
       </section>
-      <section className="h-[200px] bg-[#F5F5F5]">
+      <section className="h-[140px] bg-[#F5F5F5]">
         <About />
       </section>
     </main>

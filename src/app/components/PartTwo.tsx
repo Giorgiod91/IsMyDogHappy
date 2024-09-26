@@ -9,6 +9,7 @@ type Props = {};
 function PartTwo({}: Props) {
   const [clicked, setClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
+  const [hoverClicked, setHoverClicked] = useState(false);
   // const [flipClicked, setFlipClicked] = useState(false);
   const trackHashMap = new Map();
   trackHashMap.set(
@@ -65,6 +66,10 @@ function PartTwo({}: Props) {
       <h1 className="text-pretty text-center text-7xl font-extrabold text-gray-900">
         What does my dog need to be happy?
       </h1>
+      <p className="text-center font-extralight">
+        {" "}
+        You can Click those Cards!{" "}
+      </p>
       <div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
         {Array.from(sortedTrackHashMap).map(([key], index) => (
           <div id={index.toString()} className="flex flex-col">
@@ -88,6 +93,7 @@ function PartTwo({}: Props) {
                 }}
                 className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
               >
+                {" "}
                 {clickedIndex == index ? (
                   <div
                     onClick={() =>
