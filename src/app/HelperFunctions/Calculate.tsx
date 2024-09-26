@@ -6,9 +6,12 @@ const difference = (
   dog: { name: string; need: number },
 ): string => {
   if (time > dog.need) {
-    return "That Dog Is Happy!";
+    const isHappy = "That Dog Is Happy!";
+
+    return isHappy;
   } else {
-    return "That Dog needs more time!";
+    const isNotHappy = "That Dog is not Happy!";
+    return isNotHappy;
   }
 };
 

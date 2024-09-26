@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import difference from "../HelperFunctions/Calculate"; // Ensure this function returns a string
+
 import { DogRaces } from "../utils/DogRace";
 import { motion as Motion } from "framer-motion";
 import { Button } from "../../components/ui/button";
@@ -21,6 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../components/ui/select";
+import { string } from "zod";
 
 type Props = {};
 
@@ -37,8 +39,15 @@ function TimeToMove({}: Props) {
 
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
+    const selectedDog = DogRaces[currentIndex]; // Get the selected dog from DogRaces based on currentIndex
+    const reealTime = time;
+    if (selectedDog) {
+      const result = difference(reealTime, selectedDog);
+      setResult(result);
+    } else {
+      console.error("Selected dog is undefined");
+    }
   };
-
   return (
     <Motion.div
       initial={{ opacity: 0, x: 300 }}
