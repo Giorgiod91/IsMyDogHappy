@@ -63,14 +63,14 @@ function PartTwo({}: Props) {
 
   return (
     <div className="mt-20 flex flex-col justify-center space-y-10">
-      <h1 className="text-pretty text-center text-7xl font-extrabold text-gray-900">
+      <h1 className="text-pretty text-center text-4xl font-extrabold text-gray-900 md:text-7xl">
         What does my dog need to be happy?
       </h1>
       <p className="text-center font-extralight">
         {" "}
         You can Click those Cards!{" "}
       </p>
-      <div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
+      <div className="flex items-center gap-16 md:flex-row md:justify-center">
         {Array.from(sortedTrackHashMap).map(([key], index) => (
           <div id={index.toString()} className="flex flex-col">
             {key.emoji.includes(".png") ? (

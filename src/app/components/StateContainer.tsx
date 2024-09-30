@@ -13,7 +13,7 @@ function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
       whileInView={{ backgroundColor: "" }}
       className="relative mx-auto mt-12 flex max-w-4xl flex-col items-center justify-center rounded-lg bg-gray-900 p-6 shadow-2xl"
     >
-      <h2 className="mb-6 text-7xl font-extrabold text-white">
+      <h2 className="mb-6 text-4xl font-extrabold text-white md:text-7xl">
         Your Dog's Stats
       </h2>
       <div className="flex w-full flex-col gap-6 overflow-x-scroll md:grid md:flex-none md:grid-cols-2 md:overflow-visible">
