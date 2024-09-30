@@ -37,6 +37,10 @@ function TimeToMove({}: Props) {
   //  setTime(value);
   // };
 
+  // function to calculate the rest of the time dog would need to be happy depending on users input
+
+  const whatIsMissing = (time: number) => {};
+
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
     const selectedDog = DogRaces[currentIndex]; // Get the selected dog from DogRaces based on currentIndex
@@ -120,8 +124,12 @@ function TimeToMove({}: Props) {
             Show
           </Button>
         </CardFooter>
-        {result && (
+        {result?.includes("That Dog Is Happy!") ? (
           <div className="text-center text-xl font-bold text-[#10B981]">
+            {result}
+          </div>
+        ) : (
+          <div className="text-center text-xl font-bold text-[#bb333e]">
             {result}
           </div>
         )}

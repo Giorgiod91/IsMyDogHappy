@@ -91,7 +91,7 @@ function PartTwo({}: Props) {
                   damping: 10,
                   ease: "easeOut",
                 }}
-                className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg"
+                className="border-1 flex cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg md:h-[130px] md:w-[230px]"
               >
                 {" "}
                 {clickedIndex == index ? (
