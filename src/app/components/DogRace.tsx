@@ -43,7 +43,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card>
+                <Card className="md:h-[435px]">
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <div className="flex flex-col">
                       <Motion.img

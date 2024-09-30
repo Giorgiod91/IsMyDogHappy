@@ -16,7 +16,7 @@ function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
       <h2 className="mb-6 text-7xl font-extrabold text-white">
         Your Dog's Stats
       </h2>
-      <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="flex w-full flex-col gap-6 overflow-x-scroll md:grid md:flex-none md:grid-cols-2 md:overflow-visible">
         <div className="flex flex-col items-center justify-center rounded-lg p-6 shadow-md">
           <DogRace susge={susge} susge2={susge2} />
         </div>

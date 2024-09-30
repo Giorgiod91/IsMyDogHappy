@@ -58,7 +58,7 @@ function TimeToMove({}: Props) {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Card className="h-[405px] w-[345px] bg-[#F3F4F6] shadow-lg">
+      <Card className="h-[435px] w-[345px] bg-[#F3F4F6] shadow-lg">
         <CardHeader>
           <CardTitle className="text-pretty text-center text-2xl font-extrabold text-gray-900">
             ⏰ How Much Time in Total?
@@ -125,13 +125,9 @@ function TimeToMove({}: Props) {
           </Button>
         </CardFooter>
         {result?.includes("That Dog Is Happy!") ? (
-          <div className="text-center text-xl font-bold text-[#10B981]">
-            {result}
-          </div>
+          <div className="text-center font-bold text-[#10B981]">{result}</div>
         ) : (
-          <div className="text-center text-xl font-bold text-[#bb333e]">
-            {result}
-          </div>
+          <div className="text-center font-bold text-[#bb333e]">{result}</div>
         )}
       </Card>
     </Motion.div>
