@@ -54,7 +54,7 @@ function TimeToMove({}: Props) {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Card className="w-[350px] bg-[#F3F4F6] shadow-lg">
+      <Card className="h-[405px] w-[345px] bg-[#F3F4F6] shadow-lg">
         <CardHeader>
           <CardTitle className="text-pretty text-center text-2xl font-extrabold text-gray-900">
             ⏰ How Much Time in Total?
