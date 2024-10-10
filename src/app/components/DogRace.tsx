@@ -7,6 +7,8 @@ import { DiVim } from "react-icons/di";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { motion as Motion } from "framer-motion";
 
+//::TODO: add more specifics for the dog races
+
 import { Card, CardContent } from "../../components/ui/card";
 import {
   Carousel,
