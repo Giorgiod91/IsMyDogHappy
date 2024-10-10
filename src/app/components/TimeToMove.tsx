@@ -125,9 +125,20 @@ function TimeToMove({}: Props) {
           </Button>
         </CardFooter>
         {result?.includes("That Dog Is Happy!") ? (
-          <div className="text-center font-bold text-[#10B981]">{result}</div>
+          <div className="flex p-5 text-center font-bold text-[#10B981]">
+            {result}{" "}
+            <img
+              width={50}
+              height={50}
+              src="./happy-dogTwo.png"
+              alt="happy-dog"
+            />
+          </div>
         ) : (
-          <div className="text-center font-bold text-[#bb333e]">{result}</div>
+          <div className="flex text-center font-bold text-[#bb333e]">
+            {result}{" "}
+            <img width={50} height={50} src="./sad-dog.png" alt="sad-dog" />
+          </div>
         )}
       </Card>
     </Motion.div>
