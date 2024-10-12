@@ -6,6 +6,7 @@ export const DogRaces = [
     activity_level: 30,
     exercise_needs: "Low to moderate",
     life_span: "between 12-18 years",
+    learn_more: "https://dogtime.com/dog-breeds/chihuahua",
   },
   {
     name: "bulldog",
@@ -14,6 +15,7 @@ export const DogRaces = [
     activity_level: 15,
     exercise_needs: "Low",
     life_span: "between 8-10 years",
+    learn_more: "https://dogtime.com/dog-breeds/bulldog",
   },
   {
     name: "poodle",
@@ -22,6 +24,7 @@ export const DogRaces = [
     activity_level: 30,
     exercise_needs: "Moderate",
     life_span: "between 12-15 years",
+    learn_more: "https://dogtime.com/dog-breeds/poodle",
   },
   {
     name: "Jack Russell",
@@ -30,5 +33,6 @@ export const DogRaces = [
     activity_level: 95,
     exercise_needs: "High",
     life_span: "between 13-16 years",
+    learn_more: "https://dogtime.com/dog-breeds/jack-russell-terrier",
   },
 ];

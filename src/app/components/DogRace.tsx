@@ -83,6 +83,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                     <p className="text-sm text-gray-700">
                       {DogRaces[currentIndex]?.life_span}
                     </p>
+                    <a href={DogRaces[currentIndex]?.learn_more}>Lear more</a>
                   </div>
                 </Card>
               </div>
