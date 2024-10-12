@@ -45,7 +45,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card className="md:h-[435px]">
+                <Card className="md:h-[465px]">
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <div className="flex flex-col">
                       <Motion.img
@@ -75,6 +75,13 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                     </p>
                     <p className="text-sm text-gray-700">
                       {DogRaces[currentIndex]?.exercise_needs || ""}
+                    </p>
+
+                    <p className="text-sm font-semibold text-gray-600">
+                      🌱 Life Span
+                    </p>
+                    <p className="text-sm text-gray-700">
+                      {DogRaces[currentIndex]?.life_span}
                     </p>
                   </div>
                 </Card>
