@@ -7,6 +7,8 @@ import { DiVim } from "react-icons/di";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { motion as Motion } from "framer-motion";
 
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+
 //::TODO: add more specifics for the dog races
 
 import { Card, CardContent } from "../../components/ui/card";
@@ -17,7 +19,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../components/ui/carousel";
-import { div } from "framer-motion/client";
+import { div, pre } from "framer-motion/client";
+import { Car } from "lucide-react";
 
 function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +30,6 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
       prevIndex === DogRaces.length - 1 ? 0 : prevIndex + 1,
     );
   };
-
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? DogRaces.length - 1 : prevIndex - 1,
@@ -90,9 +92,22 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious onClick={handlePrevious} />
-
-        <CarouselNext onClick={handleNext} />
+        <div className="flex justify-between">
+          <button
+            className="h-8 w-8 rounded-full bg-white"
+            onClick={handlePrevious}
+          >
+            <BsArrowLeftCircle className="h-4 w-4" />
+            <span className="sr-only">Previous slide</span>
+          </button>
+          <button
+            className="h-8 w-8 rounded-full bg-red-500"
+            onClick={handleNext}
+          >
+            <BsArrowRightCircle className="h-4 w-4" />
+            <span className="sr-only">Next slide</span>
+          </button>
+        </div>
       </Carousel>
     </Motion.div>
   );
