@@ -93,20 +93,17 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
           ))}
         </CarouselContent>
         <div className="flex justify-between">
-          <button
-            className="h-8 w-8 rounded-full bg-white"
+          <BsArrowLeftCircle
+            className="h-4 w-4 bg-white"
             onClick={handlePrevious}
-          >
-            <BsArrowLeftCircle className="h-4 w-4" />
-            <span className="sr-only">Previous slide</span>
-          </button>
-          <button
-            className="h-8 w-8 rounded-full bg-red-500"
+          />
+          <span className="sr-only">Previous slide</span>
+
+          <BsArrowRightCircle
             onClick={handleNext}
-          >
-            <BsArrowRightCircle className="h-4 w-4" />
-            <span className="sr-only">Next slide</span>
-          </button>
+            className="h-4 w-4 bg-white"
+          />
+          <span className="sr-only">Next slide</span>
         </div>
       </Carousel>
     </Motion.div>
