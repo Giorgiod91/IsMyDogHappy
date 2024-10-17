@@ -31,7 +31,7 @@ const PrintsBackground = ({ printCount }: PrintsBackgroundProps) => {
     return prints;
   };
   return (
-    <div className="absolute left-0 top-0 h-full w-full overflow-hidden">
+    <div className="absolute left-0 top-0 z-10 h-full w-full overflow-hidden">
       {generatePrints()}
     </div>
   );

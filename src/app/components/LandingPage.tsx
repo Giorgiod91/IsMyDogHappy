@@ -12,9 +12,9 @@ type Props = {};
 
 function LandingPage({}: Props) {
   return (
-    <div className="0 relative flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
+    <div className="relative z-0 flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
       <PrintsBackground printCount={50} />
-      <header className="absolute left-0 top-0 flex w-full justify-between p-4">
+      <header className="absolute left-0 top-0 z-20 flex w-full justify-between p-4">
         <h1 className="text-3xl font-bold">
           Pup <span className="text-[#10B981]">Happiness</span>
           <span className="text-yellow-400 opacity-0 lg:opacity-100">🐾</span>
@@ -36,7 +36,7 @@ function LandingPage({}: Props) {
           <motion.img
             src="/happy-dog.png"
             alt="Happy Dog"
-            className="m-2 w-full max-w-md rounded-lg shadow-lg"
+            className="relative z-30 m-2 w-full max-w-md rounded-lg shadow-lg"
             initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             animate={{ scale: 1, opacity: 1 }}
