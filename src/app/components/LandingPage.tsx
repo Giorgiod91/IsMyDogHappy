@@ -58,7 +58,7 @@ function LandingPage({}: Props) {
           friend's happiness! <span className="text-yellow-400">✨</span>
         </p>
 
-        <button className="rounded-lg bg-[#10B981] px-6 py-2 text-white transition duration-300 hover:bg-gray-600">
+        <button className="z-40 rounded-lg bg-[#10B981] px-6 py-2 text-white transition duration-300 hover:bg-gray-600">
           Get Started <span className="text-yellow-400">🚀</span>
         </button>
       </main>
