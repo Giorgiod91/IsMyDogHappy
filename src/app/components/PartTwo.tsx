@@ -3,6 +3,7 @@ import { div, p } from "framer-motion/client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import PrintsBackground from "./PrintsBackground";
 
 type Props = {};
 

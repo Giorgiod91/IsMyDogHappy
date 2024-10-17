@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
-interface printCount {
-  printCount: number;
-}
 
-const PrintsBackground = (printCount) => {
+type PrintsBackgroundProps = {
+  printCount: number;
+};
+
+const PrintsBackground = ({ printCount }: PrintsBackgroundProps) => {
   const generatePrints = () => {
     let prints: JSX.Element[] = [];
     for (let i = 0; i < printCount; i++) {

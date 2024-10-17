@@ -13,7 +13,7 @@ type Props = {};
 function LandingPage({}: Props) {
   return (
     <div className="0 relative flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
-      {/* <PrintsBackground printCount={50} /> */}
+      <PrintsBackground printCount={50} />
       <header className="absolute left-0 top-0 flex w-full justify-between p-4">
         <h1 className="text-3xl font-bold">
           Pup <span className="text-[#10B981]">Happiness</span>
@@ -45,9 +45,14 @@ function LandingPage({}: Props) {
             whileTap={{ scale: 0.95, rotate: -2 }}
           />
         </div>
-        <h2 className="mb-4 text-pretty text-5xl font-extrabold">
+        <motion.h2
+          className="mb-4 text-5xl font-extrabold"
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          whileInView={{ y: 0, opacity: 1 }}
+        >
           Track Your Pup's Joy <span className="text-yellow-400">🐕</span>
-        </h2>
+        </motion.h2>
         <p className="mb-8 text-xl">
           Experience a new era of innovation and design for your Playful
           friend's happiness! <span className="text-yellow-400">✨</span>
