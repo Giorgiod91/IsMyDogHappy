@@ -24,9 +24,7 @@ import {
 } from "../../components/ui/select";
 import { string } from "zod";
 
-type Props = {};
-
-function TimeToMove({}: Props) {
+function TimeToMove() {
   const [time, setTime] = useState(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);

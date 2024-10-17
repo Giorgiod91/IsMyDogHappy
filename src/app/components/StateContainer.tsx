@@ -4,8 +4,6 @@ import DogRace from "./DogRace";
 import TimeToMove from "./TimeToMove";
 import { motion } from "framer-motion";
 
-type Props = {};
-
 function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (

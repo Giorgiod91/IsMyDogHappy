@@ -6,11 +6,7 @@ import StateContainer from "./StateContainer";
 import { motion } from "framer-motion";
 import PrintsBackground from "./PrintsBackground";
 
-type Props = {};
-//:TODO: fix helper functions to calc right
-//:TODO: create a more modern appealing styling to state container and the cards
-
-function LandingPage({}: Props) {
+function LandingPage() {
   return (
     <div className="relative z-0 flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white">
       <PrintsBackground printCount={50} />

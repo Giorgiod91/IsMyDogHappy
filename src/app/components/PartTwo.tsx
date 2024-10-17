@@ -5,9 +5,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PrintsBackground from "./PrintsBackground";
 
-type Props = {};
-
-function PartTwo({}: Props) {
+function PartTwo() {
   const [clicked, setClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
   const [hoverClicked, setHoverClicked] = useState(false);
