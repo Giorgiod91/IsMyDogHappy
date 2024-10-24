@@ -7,7 +7,7 @@ type PrintsBackgroundProps = {
 
 const PrintsBackground = ({ printCount }: PrintsBackgroundProps) => {
   const generatePrints = () => {
-    let prints: JSX.Element[] = [];
+    const prints: JSX.Element[] = [];
     for (let i = 0; i < printCount; i++) {
       const size = Math.random() * 3 + 2;
       const left = Math.random() * 100;

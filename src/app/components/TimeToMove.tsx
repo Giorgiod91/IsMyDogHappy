@@ -29,15 +29,13 @@ function TimeToMove() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [result, setResult] = useState<string | null>(null);
-  const safeTheInput = () => {};
+
   //const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   // e.preventDefault();
   //  setTime(value);
   // };
 
   // function to calculate the rest of the time dog would need to be happy depending on users input
-
-  const whatIsMissing = (time: number) => {};
 
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
