@@ -87,7 +87,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                         🏃‍♂️ Exercise Needs
                       </p>
                       <p className="text-sm text-gray-700">
-                        {DogRaces[currentIndex]?.exercise_needs ||
+                        {DogRaces[currentIndex]?.exercise_needs ??
                           "Low to Moderate"}
                       </p>
                     </div>
@@ -97,7 +97,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                         🌱 Life Span
                       </p>
                       <p className="text-sm text-gray-700">
-                        {DogRaces[currentIndex]?.life_span || "10-15 years"}
+                        {DogRaces[currentIndex]?.life_span ?? "10-15 years"}
                       </p>
                     </div>
                     <div className="flex flex-col">
