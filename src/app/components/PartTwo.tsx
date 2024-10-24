@@ -78,7 +78,7 @@ function PartTwo() {
       </p>
       <div className="flex items-center gap-16 md:flex-row md:justify-center">
         {Array.from(sortedTrackHashMap).map(([key], index) => (
-          <div key={key} id={index.toString()} className="flex flex-col">
+          <div key={key.name} id={index.toString()} className="flex flex-col">
             {key.emoji.includes(".png") ? (
               <motion.div
                 onClick={() =>
