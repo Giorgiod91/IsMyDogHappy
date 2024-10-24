@@ -70,7 +70,7 @@ function TimeToMove() {
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Label htmlFor="time" className="font-semibold text-gray-700">
-                  Time
+                  Time in minutes
                 </Label>
                 <Input
                   id="time"
