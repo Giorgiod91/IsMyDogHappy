@@ -65,8 +65,11 @@ function LandingPage() {
 
         <div className="mb-8 flex flex-col items-center justify-center">
           <button className="z-40 mb-4 cursor-pointer rounded-lg bg-[#10B981] px-6 py-2 text-white transition duration-300 hover:bg-gray-600">
-            Track Now <span className="text-yellow-400">🚀</span>
+            <a href="#partTwo">
+              Track Now <span className="text-yellow-400">🚀</span>
+            </a>
           </button>
+
           <p className="text-sm text-gray-400"></p>
         </div>
         {/* section placeholder <section className="mb-8 mt-16 rounded-lg bg-gray-800 px-4 py-6 shadow-lg">

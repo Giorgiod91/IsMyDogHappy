@@ -13,7 +13,7 @@ function StateContainer({ susge, susge2 }: { susge: string; susge2: string }) {
     >
       <h2 className="mb-6 text-4xl font-extrabold text-white md:text-7xl">
         <span className="text-[#10B981]">Y</span>
-        our <span className="text-[#10B981]">D</span>og's{" "}
+        our <span className="text-[#10B981]">D</span>og&apos;s{" "}
         <span className="text-[#10B981]">S</span>tats
       </h2>
       <div className="flex w-full flex-col gap-6 overflow-x-scroll md:grid md:flex-none md:grid-cols-2 md:overflow-visible">
