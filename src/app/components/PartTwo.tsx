@@ -5,6 +5,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PrintsBackground from "./PrintsBackground";
 
+// defining types for the dog activities
+type DogActivity = {
+  name: string;
+  emoji: string;
+  description: string;
+};
+
 function PartTwo() {
   const [clicked, setClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
