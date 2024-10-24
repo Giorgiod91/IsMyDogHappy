@@ -41,8 +41,15 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
       initial={{ opacity: 0, x: -300 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
+      className="flex items-center justify-center space-x-4" // Flex container to center and space the items
     >
-      <Carousel className="w-full max-w-xs">
+      <BsArrowLeftCircle
+        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-gray-900"
+        onClick={handlePrevious}
+        aria-label="Previous Slide"
+      />
+
+      <Carousel className="max-w-xs">
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
@@ -54,9 +61,9 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                         whileInView={{ scale: 1.05 }}
                         transition={{ duration: 0.5 }}
                         src={DogRaces[currentIndex]?.img}
-                        alt="dograce"
+                        alt="Dog Race"
                         className="mb-4 h-48 w-full rounded-lg object-cover shadow-md"
-                      ></Motion.img>
+                      />
                       <p className="mb-1 text-xl font-medium text-gray-800">
                         {DogRaces[currentIndex]?.name} 🏆
                       </p>
@@ -85,27 +92,25 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                     <p className="text-sm text-gray-700">
                       {DogRaces[currentIndex]?.life_span}
                     </p>
-                    <a href={DogRaces[currentIndex]?.learn_more}>Lear more</a>
+                    <a
+                      href={DogRaces[currentIndex]?.learn_more}
+                      className="text-blue-500 hover:underline"
+                    >
+                      Learn more
+                    </a>
                   </div>
                 </Card>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="flex justify-between">
-          <BsArrowLeftCircle
-            className="h-4 w-4 bg-white"
-            onClick={handlePrevious}
-          />
-          <span className="sr-only">Previous slide</span>
-
-          <BsArrowRightCircle
-            onClick={handleNext}
-            className="h-4 w-4 bg-white"
-          />
-          <span className="sr-only">Next slide</span>
-        </div>
       </Carousel>
+
+      <BsArrowRightCircle
+        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-gray-900"
+        onClick={handleNext}
+        aria-label="Next Slide"
+      />
     </Motion.div>
   );
 }
