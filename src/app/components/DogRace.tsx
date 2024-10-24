@@ -44,7 +44,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
       className="flex items-center justify-center space-x-4"
     >
       <BsArrowLeftCircle
-        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-gray-900"
+        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-[#9ce2c6]"
         onClick={handlePrevious}
         aria-label="Previous Slide"
       />
@@ -100,13 +100,12 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                         {DogRaces[currentIndex]?.life_span || "10-15 years"}
                       </p>
                     </div>
-
-                    <a
-                      href={DogRaces[currentIndex]?.learn_more}
-                      className="text-blue-500 hover:underline"
-                    >
-                      Learn more
-                    </a>
+                    <div className="flex flex-col">
+                      <p>Learn more</p>
+                      <a href={DogRaces[currentIndex]?.learn_more} className="">
+                        Learn more
+                      </a>
+                    </div>
                   </div>
                 </Card>
               </div>
@@ -116,7 +115,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
       </Carousel>
 
       <BsArrowRightCircle
-        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-gray-900"
+        className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-[#9ce2c6]"
         onClick={handleNext}
         aria-label="Next Slide"
       />
