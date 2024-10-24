@@ -41,7 +41,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
       initial={{ opacity: 0, x: -300 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="flex items-center justify-center space-x-4" // Flex container to center and space the items
+      className="flex items-center justify-center space-x-4"
     >
       <BsArrowLeftCircle
         className="h-8 w-8 cursor-pointer text-[#10B981] transition-transform duration-300 hover:text-gray-900"
@@ -56,7 +56,7 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
               <div className="p-1">
                 <Card className="md:h-[465px]">
                   <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center">
                       <Motion.img
                         whileInView={{ scale: 1.05 }}
                         transition={{ duration: 0.5 }}
@@ -69,29 +69,38 @@ function DogRace({ susge, susge2 }: { susge: string; susge2: string }) {
                       </p>
                     </div>
                   </CardContent>
-                  <div className="flex w-full flex-col space-y-2 px-4">
-                    <p className="text-sm font-semibold text-gray-600">
-                      ⚡ Activity Level
-                    </p>
-                    <progress
-                      className="progress progress-accent w-full"
-                      value={DogRaces[currentIndex]?.activity_level}
-                      max="100"
-                    ></progress>
 
-                    <p className="text-sm font-semibold text-gray-600">
-                      🏃‍♂️ Exercise Needs
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      {DogRaces[currentIndex]?.exercise_needs || ""}
-                    </p>
+                  <div className="flex w-full flex-col space-y-4 px-4 py-2">
+                    <div className="flex flex-col">
+                      <p className="text-sm font-semibold text-gray-600">
+                        ⚡ Activity Level
+                      </p>
+                      <progress
+                        className="progress progress-accent h-4 w-full rounded"
+                        value={DogRaces[currentIndex]?.activity_level}
+                        max="100"
+                      ></progress>
+                    </div>
 
-                    <p className="text-sm font-semibold text-gray-600">
-                      🌱 Life Span
-                    </p>
-                    <p className="text-sm text-gray-700">
-                      {DogRaces[currentIndex]?.life_span}
-                    </p>
+                    <div className="flex flex-col">
+                      <p className="text-sm font-semibold text-gray-600">
+                        🏃‍♂️ Exercise Needs
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        {DogRaces[currentIndex]?.exercise_needs ||
+                          "Low to Moderate"}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <p className="text-sm font-semibold text-gray-600">
+                        🌱 Life Span
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        {DogRaces[currentIndex]?.life_span || "10-15 years"}
+                      </p>
+                    </div>
+
                     <a
                       href={DogRaces[currentIndex]?.learn_more}
                       className="text-blue-500 hover:underline"
