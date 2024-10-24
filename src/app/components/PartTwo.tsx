@@ -5,19 +5,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PrintsBackground from "./PrintsBackground";
 
-// defining types for the dog activities
+//type for the dog activities
 type DogActivity = {
   name: string;
   emoji: string;
   description: string;
 };
 
+//type for the Map
+type TrackHashMap = Map<DogActivity, number>;
+
 function PartTwo() {
-  const [clicked, setClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
-  const [hoverClicked, setHoverClicked] = useState(false);
-  // const [flipClicked, setFlipClicked] = useState(false);
-  const trackHashMap = new Map();
+
+  const trackHashMap: TrackHashMap = new Map<DogActivity, number>();
   trackHashMap.set(
     {
       name: "walking",
@@ -40,7 +41,7 @@ function PartTwo() {
       name: "eating",
       emoji: "/eat.png",
       description:
-        "your dog needs at least wet food once a day and dry foot aswell",
+        "your dog needs at least wet food once a day and dry food as well",
     },
     4,
   );
@@ -58,11 +59,12 @@ function PartTwo() {
       name: "treats",
       emoji: "🦴",
       description:
-        "treats are important aswell u can use them as a reward aswell",
+        "treats are important as well u can use them as a reward as well",
     },
     6,
   );
-  //sorting the hashmap by value
+
+  // Sorting the hashmap by value
   const sortedTrackHashMap = Array.from(trackHashMap).sort(
     (a, b) => a[1] - b[1],
   );
@@ -72,12 +74,9 @@ function PartTwo() {
       <h1 className="text-pretty text-center text-4xl font-extrabold text-gray-900 md:text-7xl">
         What does my dog need to be happy?
       </h1>
-      <p className="text-center font-extralight">
-        {" "}
-        You can Click those Cards!{" "}
-      </p>
+      <p className="text-center font-extralight">You can Click those Cards!</p>
       <div className="flex items-center gap-16 md:flex-row md:justify-center">
-        {Array.from(sortedTrackHashMap).map(([key], index) => (
+        {sortedTrackHashMap.map(([key], index) => (
           <div key={key.name} id={index.toString()} className="flex flex-col">
             {key.emoji.includes(".png") ? (
               <motion.div
@@ -91,7 +90,6 @@ function PartTwo() {
                 }}
                 initial={{ opacity: 0, y: 200 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                //viewport margin bottom
                 viewport={{ once: true }}
                 transition={{
                   type: "spring",
@@ -101,13 +99,8 @@ function PartTwo() {
                 }}
                 className="border-1 flex cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] shadow-lg md:h-[130px] md:w-[230px]"
               >
-                {" "}
-                {clickedIndex == index ? (
-                  <div
-                    onClick={() =>
-                      setClickedIndex(clickedIndex === index ? null : index)
-                    }
-                  >
+                {clickedIndex === index ? (
+                  <div>
                     <p className="p-3 font-semibold text-gray-700">
                       {key.description}
                     </p>
@@ -120,7 +113,6 @@ function PartTwo() {
                 )}
               </motion.div>
             ) : (
-              /* emoji part*/
               <motion.div
                 onClick={() =>
                   setClickedIndex(clickedIndex === index ? null : index)
@@ -140,12 +132,8 @@ function PartTwo() {
                 }}
                 className="border-1 flex h-[130px] w-[230px] cursor-pointer flex-col items-center justify-center rounded-lg bg-[#F3F4F6] font-extrabold shadow-lg"
               >
-                {clickedIndex == index ? (
-                  <div
-                    onClick={() =>
-                      setClickedIndex(clickedIndex === index ? null : index)
-                    }
-                  >
+                {clickedIndex === index ? (
+                  <div>
                     <p className="p-3 font-semibold text-gray-700">
                       {key.description}
                     </p>
