@@ -12,7 +12,6 @@ const difference = (
   } else {
     const whatIsMissing = dog.need - time;
     const isNotHappy = `That Dog is not Happy! It needs ${whatIsMissing} more minutes of exercise`;
-    whatIsMissing + (dog.need - time);
 
     return isNotHappy;
   }
